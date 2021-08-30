@@ -1,0 +1,24 @@
+* class:
+  class trong kotlin được khai báo với từ khóa class
+  VD:
+  class SinhVien {
+  } 
+
+* abstract class:
+  abstract class trong kotlin được khai báo với từ khóa abstract trước class
+
+  VD:
+  
+  abstract class Hinh {
+  }
+
+* interface:
+  interface trong kotlin được khai báo với từ khóa interface
+  
+  VD:
+  
+  interface Dog {
+  }
+
+ * So sánh interface trong kotlin và java:
+   Interface trong kotlin có thể khai báo thuộc tính

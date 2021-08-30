@@ -1,0 +1,43 @@
+* let:
+  Là một hàm phạm vi. Được sử dụng khi muốn định nghĩa một biến trong một phạm avi cụ thể trong đọa code.
+  Giúp đoạn code tự đóng gói vì thế không lo những biến này bị rò rỉ ra ngoài. let được sử dụng khá nhiều trong checking null
+  VD:
+  getData.let { data ->
+  }
+  // biến data không xuất hiện ở đây nữa
+
+* with:
+   Có thể gọi nhiều methods khác nhau trong cùng một đối tượng, thay vì phải liên tục lặp lại việc gọi biến mỗi 
+
+   VD:
+   val hinhchunhat = ChuNhat()
+
+   with(hinhchunhat) {
+     setWidth(10)
+     setLength(20)
+   }
+
+* run: 
+  Là một sự kết  hợp giữa with() và let()
+
+* apply():
+  Định nghĩa một extension function cho tất cả các loại object.
+  VD:
+  webView.apply {
+            settings.loadsImagesAutomatically
+            settings.javaScriptEnabled
+            scrollBarStyle = View.SCROLLBARS_INSIDE_OVERLAY
+            loadUrl(url)
+            webViewClient = WebViewClient()
+        }
+
+* also:
+  Tương tự apply nhưng đối số trong khối là explicit
+  VD:
+  webView.also {
+            it.settings.loadsImagesAutomatically
+            it.settings.javaScriptEnabled
+            it.scrollBarStyle = View.SCROLLBARS_INSIDE_OVERLAY
+            it.loadUrl(url)
+            it.webViewClient = WebViewClient()
+        }

@@ -1,0 +1,26 @@
+*Constructor:
+
+- Khai báo hàm khởi tạo chính:
+ VD:
+ 
+ class SinhVien(var ten: String, var msv: String) {
+ }
+ 
+ - Khai báo hàm khởi tạo thứ cấp:
+ 
+ class SinhVien(var ten: String, var msv: String) {
+
+   constructor() : this("","")
+ }
+
+* init và constructor :
+  Để thực hiện các logic code ngay sau primary constructor thì có thể thực hiện bằng cách khởi tạo ra 1 block {} với từ khóa 
+  tiền tố init ở trước
+
+  VD:
+
+  class HocSinh(name: String) {
+    init {
+      print("Hoc sinh tên $name")
+    }
+  }

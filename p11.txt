@@ -1,0 +1,21 @@
+* data class:
+  class có mục đích chính là lưu trữ dữ liệu
+
+  VD: 
+  
+  data class HocSinh(val ten: String, val tuoi: Int)
+
+  - Khi cần có một hàm constructor rỗng thì thêm những giá trị mặc định cho tất cả thuộc tính
+
+  VD:
+  
+  data class HocSinh(val ten: String = "", val tuoi: Int = 0)
+
+* Sự khác nhau giữa data class và class:
+
+  data class:
+  - Hàm constructor chính phải có ít nhất một tham số truyền vào 
+  - Tất cả các tham số truyền vào trong hàm constructor chính phải được khai báo là val hoặc var
+  - Không thể là abstract, open, sealed, inner
+  
+  
