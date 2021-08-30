@@ -1,0 +1,20 @@
+* Array:
+
+ Mảng chứa nhiều loại dữ liệu khác nhau:
+ var arr = arrayOf(1, "Hello World", 1.5, 'A')
+
+ Mảng chưa kiểu dữ liệu:
+ var arr = arrayOf<Int>(1, 2, 3)
+
+* List: Nó đại diện cho một tập các phần tử có thứ tự
+
+ var list: List<Int> = listOf(1, 2, 3, 4, 5)
+
+* Set: Một tập các phần tử không có thứ tự và không hỗ trợ lưu các phần tử trùng
+
+ var set = setOf("Hung", "Manh", "Thang")
+
+* Map: Map lưu trữ các cặp key- value, các key là duy nhất, nhưng các key khác nhau có thể được ghép nối với các value bằng nhau
+
+ val numbers = mapOf("key1" to 1, "key2" to 2, "key3" to 3, "key4" to 1)
+

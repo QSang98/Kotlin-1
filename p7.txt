@@ -1,0 +1,57 @@
+*Hàm-Function:
+ -Dùng từ khóa fun để tạo hàm, tham số được đặt trong (), kiểu trả về đặt sau dấu " : "
+ VD:
+ fun tong(a: Int, b: Int): Int {
+   var c: Int = 0
+   c = a+b
+   return c
+ }
+ Hàm void:
+ fun chao() {
+   print("Hello")
+ }
+
+* Higher-Order Function: 
+- Có thể lấy các function làm tham số: 
+
+  VD: 
+  fun show(str: String, myfunction: (String) -> Unit) {
+    print(" Hello ")
+    myfunction(str)
+  }
+
+  fun main(args: Array<String>) {
+   show("World", {str: String -> println(str)})
+  }
+
+- Có thể trả về một function:
+
+  fun main(args: Array<String>) {
+
+   val add = returnFunction()
+   val result = add(1, 2)
+
+   println("1 + 2 = ${result}")
+  }
+
+  fun returnFunction(): ((Int, Int) -> Int) {
+     return ::add
+  }
+
+  fun add(a: Int, b: Int): Int = a + b
+
+* Lambda: Là một hàm ẩn danh, được định nghĩa bằng {} mà có thể coi là 1 giá trị. 
+  Có thể truyền chúng làm tham số cho các function, trả về một lambda expression 
+  hoặc bất kỳ điều gì mà có thể làm với một đối tượng bình thường.
+
+  VD:
+  val print = {
+      println("Hello world")
+  }
+  Và gọi hàm: print() hoặc print.invoke()
+
+  Ví dụ truyền tham số vào hàm lambda:
+  val hello = { a: String ->
+     println("Hello" $a)
+  }
+  hello("Hung")
