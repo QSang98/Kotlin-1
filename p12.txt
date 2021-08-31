@@ -1,0 +1,15 @@
+*companion object:
+ Trong kotlin không còn từ khóa static. Để tạo các static variables, function, class trong kotlin thì đặt nó trong companion object 
+ nằm trong class chính. Khi class chính được gọi tới lần đầu, một thể hiện của lớp này được tạo ra chứa các thuộc tính và phương thức bên trong để các thể 
+ hiện của class chính có thể gọi tới. Nó gần như là 1 đối tượng thực sự chứ không phải static class member.
+
+ VD:
+ class HocSinh {
+
+    companion object {
+       fun newInstance() = HocSinh()
+    }
+ }
+
+ Và có thể gọi lớp này từ một lớp khác:
+   HocSinh.newInstance()

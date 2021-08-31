@@ -1,0 +1,28 @@
+* filter:
+  Trả về một list các phần tử thỏa mãn logic truyền vào
+
+  VD:
+
+  var list = mutableListOf(1, 2, 3, 4, 5)
+  var result = list.filter {
+      it % 2 == 0 
+  }
+  print(result) // kết quả là: 2, 4
+
+* sort:
+  Sắp xếp tăng dần 
+
+  VD:
+
+  val array = intArrayOf(5, 4, 3, 2, 1)
+
+  println(array.joinToString())
+
+  array.sort()
+
+  println(array.joinToString()) // Kết quả là: 1, 2, 3, 4, 5
+
+* Công dụng của Collection:
+  Giống như một mảng, nhưng chúng có thể có một số lượng các phần tử có thể thay đổi 
+  tương tự như ArrayList trong Java. Các phần tử không chỉ được thêm vào mà còn 
+  có thể được xóa khỏi danh sách.
